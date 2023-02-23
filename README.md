@@ -1,5 +1,7 @@
 # youtube vod downloader
 * downloads the 720p image quality
+> things to note: if the vod does not have 720p... well its not ment to handle anything other then that 
+> (might update it later so if 720p does not exist then get 480p and so on)
 
 # how to use:
 [1]: put all your links into the links.txt
