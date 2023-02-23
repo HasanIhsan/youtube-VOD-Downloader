@@ -8,6 +8,7 @@
 >		if you lost that file recreate it (has to be called links.txt)
 
 [2]: run by using command: python downloadYoutubeVod.py 
+* >
 
 [3]: and let the magic happen!
 
