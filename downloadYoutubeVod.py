@@ -37,6 +37,7 @@ def DownloadVideo(link):
     try: 
         print(youtubeObject.title)
         youtubeObject.download(os.getcwd()+'\Downloaded_Videos')
+        print("\n")
     except:
         print("An error has occurred")
 
@@ -45,13 +46,8 @@ def startDownload():
     #Using readlines() read a file 
     links = open(os.getcwd()+"\links.txt") 
     AllLinks = links.readlines()
-     
-    count = 0
-    # Strips the newline character
-     
-    for link in AllLinks:
-        count += 1 
-        print("Link: {}: {}".format(count, link.strip()))
+      
+    for link in AllLinks: 
         DownloadVideo(link)
 
 
