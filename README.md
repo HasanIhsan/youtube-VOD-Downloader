@@ -2,11 +2,12 @@
 * downloads the 720p image quality
 
 # how to use:
-[x]: put all your links into the links.txt
+[1]: put all your links into the links.txt
 >		if you lost that file recreate it (has to be called links.txt)
 
-[2] run by using command: python downloadYoutubeVod.py 
-[3] and let the magic happen!
+[2]: run by using command: python downloadYoutubeVod.py 
+
+[3]: and let the magic happen!
 
 
 ## NOTE:
