@@ -1,7 +1,14 @@
 from pytube import YouTube
 from pytube import Playlist
-from pathlib import Path
+from pytube.cli import on_progress #this module contains the built in progress bar.  
+from pathlib import Path 
+  
 import os
+
+ 
+ 
+
+ 
 
 #using pytube to download playlists (currently not implmented with my code)
 # needs testing! 
@@ -25,30 +32,58 @@ def DownloadPlaylists(link):
 def DownloadVideo(link):
     #create a youtube object for youtube
     #get the highest resolution video has (may take a long time to download for larger resolutions)
-    youtubeObject = YouTube(link)
+    youtubeObject = YouTube(link,on_progress_callback=on_progress)
     youtubeObject = youtubeObject.streams.get_by_itag(22)
-    try:
-       
+    try: 
+        print(youtubeObject.title)
         youtubeObject.download(os.getcwd()+'\Downloaded_Videos')
     except:
         print("An error has occurred")
-    print("Download is completed successfully")
 
 
+def startDownload():
+    #Using readlines() read a file 
+    links = open(os.getcwd()+"\links.txt") 
+    AllLinks = links.readlines()
+     
+    count = 0
+    # Strips the newline character
+     
+    for link in AllLinks:
+        count += 1 
+        print("Link: {}: {}".format(count, link.strip()))
+        DownloadVideo(link)
 
-#Using readlines() read a file 
-links = open(os.getcwd()+"\links.txt") 
-AllLinks = links.readlines()
 
-#Create a new folder called downloaded_videos
-os.mkdir('Downloaded_Videos')   
-count = 0
-# Strips the newline character
-
-for link in AllLinks:
-    count += 1
-    print("Link: {}: {}".format(count, link.strip()))
-    DownloadVideo(link)
 
  
+
+#Create a new folder called downloaded_videos 
+#checking if folder exits
+path = os.getcwd()+"\Downloaded_Videos"
+isExist = os.path.exists(path)
+
+if isExist:
+    print("Download Folder Found:")
+    print("Starting Download:\n\n")
+
+    startDownload()
+else:
+    print("Download Folder Not Found Creating...\n")
+    os.mkdir('Downloaded_Videos')   
+
+    print("Download Folder Created:\n")
+    print("Starting Download...:\n\n")
+    startDownload()
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+
  
