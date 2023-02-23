@@ -5,12 +5,13 @@
 
 # how to use:
 [1]: put all your links into the links.txt
+> [2]: make sure to save the file!
 >		if you lost that file recreate it (has to be called links.txt)
 
-[2]: run by using command: python downloadYoutubeVod.py 
+[3]: run by using command: python downloadYoutubeVod.py 
 * > or if your using the exe (just run the exe) (if you don't trust the exe... the do the above step)
 
-[3]: and let the magic happen!
+[4]: and let the magic happen!
 
 
 ## NOTE:
