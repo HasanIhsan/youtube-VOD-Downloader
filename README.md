@@ -1,3 +1,5 @@
+#NOTE: NOT WORING CURRENTLY
+
 # youtube vod downloader
 * downloads the 720p image quality
 > things to note: if the vod does not have 720p... well its not ment to handle anything other then that 
