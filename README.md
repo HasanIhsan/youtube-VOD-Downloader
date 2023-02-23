@@ -4,7 +4,10 @@
 > (might update it later so if 720p does not exist then get 480p and so on)
 
 # how to use:
-[1]: put all your links into the links.txt
+[1]: put all your links into the links.txt (on every new line!)
+>![Untitled](https://user-images.githubusercontent.com/49534968/220997075-8e2a2785-6fd6-4bfe-b12e-ab60fc3ad9b4.png)
+
+
 > [2]: make sure to save the file!
 
 >		if you lost that file recreate it (has to be called links.txt, and must be in the same folder as script or exe)
